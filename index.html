@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Movie Genre Finder</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="poster-layer">
+        <img src="posters/inception.jpg" alt="Inception poster">
+        <img src="posters/interstellar.jpg" alt="Interstellar poster">
+        <img src="posters/dark-knight.jpg" alt="The Dark Knight poster">
+        <img src="posters/three-idiots.jpg" alt="3 Idiots poster">
+        <img src="posters/kgf.jpg" alt="KGF poster">
+        <img src="posters/la-la-land.jpg" alt="La La Land poster">
+    </div>
+
+    <div class="app-shell">        <header class="app-header">
+            <h1>MOVIE GENRE FINDER</h1>
+            <p>Describe the kind of movie you want to watch, and I’ll suggest some titles for you.</p>
+        </header>
+
+        <main>
+            <section class="search-section" id="searchSection">
+                <label for="preferences">What are you in the mood for?</label>
+                <textarea id="preferences" rows="4"
+                          placeholder="Examples:
+- a funny college movie
+- a dark space sci-fi adventure
+- a romantic feel-good story"></textarea>
+
+                <button id="searchBtn">✨ Find Movies</button>
+            </section>
+
+            <section id="resultsSection">
+                <h2>Suggested Movies</h2>
+                <div id="results" class="results-grid">
+                    <p class="placeholder-text">Your movie suggestions will appear here ✨</p>
+                </div>
+            </section>
+<section id="detailSection" class="detail-section hidden">
+    <button id="backBtn" class="back-btn">← Back to Search</button>
+
+    <div class="detail-layout">
+        <div class="detail-poster">
+            <div id="detailPoster" class="detail-poster-box">
+                <!-- We’ll put the first letter of the movie here -->
+            </div>
+        </div>
+
+        <div class="detail-info">
+            <h2 id="detailTitle"></h2>
+            <p id="detailMeta" class="detail-meta"></p>
+            <p id="detailPlatforms" class="detail-meta"></p>
+            <p id="detailDesc" class="detail-desc"></p>
+            <div id="detailTags" class="badges"></div>
+        </div>
+    </div>
+
+    <div class="detail-similar">
+        <h3>Suggested Movies</h3>
+        <div id="similarMovies" class="results-grid"></div>
+    </div>
+</section>
+
+        </main>
+
+        <footer>
+            <p>Mini Project – Movie Genre Finder</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
